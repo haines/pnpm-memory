@@ -4,5 +4,8 @@
     "config:best-practices",
     "group:all"
   ],
-  "minimumReleaseAge": "5 days"
+  "minimumReleaseAge": "5 days",
+  "toolSettings": {
+    "nodeMaxMemory": 1536
+  }
 }
