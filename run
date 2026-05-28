@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o nounset
+set -o pipefail
+
+image=$(docker build -q .)
+
+mkdir -p diagnostics
+
+docker run \
+  --env NODE_OPTIONS="--diagnostic-dir=/diagnostics --heapsnapshot-near-heap-limit=5 --max-old-space-size=1024" \
+  --mount type=bind,source="${PWD}/diagnostics",target=/diagnostics \
+  --rm \
+  "${image}"
