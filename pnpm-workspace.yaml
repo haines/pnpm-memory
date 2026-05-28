@@ -1,0 +1,25 @@
+allowBuilds:
+  '@datadog/pprof': false
+  '@flipt-io/typed': false
+  '@sentry/cli': false
+  bufferutil: false
+  core-js: false
+  esbuild: false
+  storybook-addon-remix-react-router: false
+
+minimumReleaseAge: 7200 # 5 days
+
+minimumReleaseAgeExclude:
+  - "@cerbos/*"
+
+overrides:
+  "@grpc/grpc-js>@grpc/proto-loader": "-"
+  encoding-sniffer@0.2.1: 1.0.2
+  path-browserify: npm:pathe@2.0.3
+  posthog-js>@opentelemetry/api-logs: 0.218.0
+  posthog-js>@opentelemetry/exporter-logs-otlp-http: 0.218.0
+  posthog-js>@opentelemetry/sdk-logs: 0.218.0
+
+saveExact: true
+
+trustLockfile: true
