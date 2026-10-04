@@ -1,4 +1,4 @@
-FROM node:24-trixie-slim@sha256:05c08ce4291e9a58f59456a7985176defb12cdd42271f35ff81a3e167ea61d4c
+FROM node:24-trixie-slim@sha256:8ec5d7557396cfe32d21c3f9c13072355ceab22b584578ca4bb28af31120cffe
 RUN npm install --global corepack && corepack enable
 WORKDIR /app
 COPY ./ ./
